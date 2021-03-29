@@ -1,0 +1,31 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color= "primary">
+    <ion-title>Cima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+    <div id="container">
+      <div>
+      <IonButton color="primary" expand="block" size="default"
+        [routerLink]="['/list']" routerdirection="forward">Ver Artistas</IonButton>
+      </div>
+
+      <div>
+        <IonButton color="primary" expand="block" size="default"
+          [routerLink]="['/artist']" routerdirection="forward">Cadastrar Artistas</IonButton>
+      </div>
+
+      <div>
+      <IonButton color="primary" expand="block" size="default"
+        [routerLink]="['/hq']" routerdirection="forward">Cadastrar HQ</IonButton>
+      </div>
+
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color= "primary">
+    <ion-title>Baixo</ion-title>
+  </ion-toolbar>
+</ion-footer>
