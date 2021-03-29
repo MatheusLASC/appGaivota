@@ -1,27 +1,34 @@
-<ion-content color="primary">
-  <div class="logo">
-    <img src="/assets/logo.png">
-    <div class="container ion-text-center">
-      <span>O aplicativo de Onboarding dos Artistas Parceiros</span>
-    </div>
-  </div>
+<ion-content color="primary" class="ion-text-center">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="logo">
+          <img src="/assets/icons/logo.png">
+        </div>
+      </ion-col>
+      <ion-col size="12">
+        <span class="mensagem">O aplicativo de Onboarding dos Artistas Parceiros</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
-<ion-content color="primary">
-  <ion-toolbar color="primary">
-    <ion-buttons
-    [routerLink]="['/list']" routerdirection="forward">Ver Artistas</ion-buttons>
-  </ion-toolbar>
-
-  <ion-toolbar color="primary">
-    <ion-buttons
-      [routerLink]="['/artist']" routerdirection="forward">Cadastrar Artistas</ion-buttons>
-  </ion-toolbar>
-
-  <ion-toolbar color="primary">
-  <ion-buttons
-    [routerLink]="['/hq']" routerdirection="forward">Cadastrar HQ</ion-buttons>
-  </ion-toolbar>
-
+<ion-content color="primary" class="ion-text-center" color="primary">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-button color="tertiary" class="btnhome"
+          [routerLink]="['/list']" routerdirection="forward">Ver Artistas</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="tertiary" class="btnhome"
+        [routerLink]="['/artist']" routerdirection="forward">Cadastrar Artistas</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button color="tertiary" class="btnhome"
+      [routerLink]="['/hq']" routerdirection="forward">Cadastrar HQ</ion-button>
+  </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
