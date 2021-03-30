@@ -1,3 +1,4 @@
+
 # Aplicativo Gaivota
 Aplicativo desenvolvido para matéria de PA VII como uma solução para minha startup Gaivota Quadrinhos
 
