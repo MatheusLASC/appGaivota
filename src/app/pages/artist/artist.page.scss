@@ -18,3 +18,15 @@
   border-radius: 5px;
   font-family: 'LulaBorges';
 }
+
+.itemBoxArtist {
+  --highlight-color-focused: none;
+  --border-style: none;
+}
+
+.btnArtist
+{
+  font-family: 'LulaBorges';
+  font-size:large;
+  width: 250px;
+}
