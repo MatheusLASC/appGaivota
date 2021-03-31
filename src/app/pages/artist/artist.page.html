@@ -1,15 +1,23 @@
 <ion-header>
   <ion-toolbar color="secondary">
     <ion-buttons slot="start">
-    <ion-back-button defaultHref="home" icon="arrow-back"></ion-back-button>
+    <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-title class="titulo">Novo Artista</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="primary">
-  <ion-item color="primary">
+  <ion-item color="primary" class="itemBoxArtist">
     <ion-label position="stacked" class="labelArtist" required>Nome Completo</ion-label>
     <ion-input type="text" class="inputArtist"></ion-input>
   </ion-item>
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="secondary" class="ion-text-center">
+    <ion-button color="tertiary" (click)="submitForm()" class="btnArtist">Finalizar</ion-button>
+    <ion-button color="tertiary" Href="artist" class="btnArtist">Cancelar</ion-button>
+  </ion-toolbar>
+</ion-footer>
