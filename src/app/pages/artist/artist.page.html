@@ -12,12 +12,86 @@
     <ion-label position="stacked" class="labelArtist" required>Nome Completo</ion-label>
     <ion-input type="text" class="inputArtist"></ion-input>
   </ion-item>
+
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-label position="stacked" class="labelArtist" required>Nome Artístico</ion-label>
+    <ion-input type="text" class="inputArtist"></ion-input>
+  </ion-item>
+
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-label position="stacked" class="labelArtist" required>CPF</ion-label>
+    <ion-input type="text" class="inputArtist"></ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="7">
+        <ion-item color="primary" class="itemBoxArtist">
+          <ion-label position="stacked" class="labelArtist" required>Cidade</ion-label>
+          <ion-input type="text" class="inputArtist"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="5">
+        <ion-item color="primary" class="itemBoxArtist">
+          <ion-label position="stacked" class="labelArtist" required>Estado</ion-label>
+          <ion-select interface="popover" class="selectStateArtist">
+            <ion-select-option value="AC">Acre</ion-select-option>
+            <ion-select-option value="AL">Alagoas</ion-select-option>
+            <ion-select-option value="AP">Amapá</ion-select-option>
+            <ion-select-option value="AM">Amazonas</ion-select-option>
+            <ion-select-option value="BA">Bahia</ion-select-option>
+            <ion-select-option value="CE">Ceará</ion-select-option>
+            <ion-select-option value="DF">Distrito Federal</ion-select-option>
+            <ion-select-option value="ES">Espírito Santo</ion-select-option>
+            <ion-select-option value="GO">Goiás</ion-select-option>
+            <ion-select-option value="MA">Maranhão</ion-select-option>
+            <ion-select-option value="MT">Mato Grosso</ion-select-option>
+            <ion-select-option value="MS">Mato Grosso do Sul</ion-select-option>
+            <ion-select-option value="MG">Minas Gerais</ion-select-option>
+            <ion-select-option value="PA">Pará</ion-select-option>
+            <ion-select-option value="PB">Paraíba</ion-select-option>
+            <ion-select-option value="PR">Paraná</ion-select-option>
+            <ion-select-option value="PE">Pernambuco</ion-select-option>
+            <ion-select-option value="PI">Piauí</ion-select-option>
+            <ion-select-option value="RJ">Rio de Janeiro</ion-select-option>
+            <ion-select-option value="RN">Rio Grande do Norte</ion-select-option>
+            <ion-select-option value="RS">Rio Grande do Sul</ion-select-option>
+            <ion-select-option value="RO">Rondônia</ion-select-option>
+            <ion-select-option value="RR">Roraima</ion-select-option>
+            <ion-select-option value="SC">Santa Catarina</ion-select-option>
+            <ion-select-option value="SP">São Paulo</ion-select-option>
+            <ion-select-option value="SE">Sergipe</ion-select-option>
+            <ion-select-option value="TO">Tocantins</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-label position="stacked" class="labelArtist" required>Mini-Biografia</ion-label>
+    <ion-textarea placeholder="Insira a mini-biografia do artista" class="inputArtist"></ion-textarea>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item color="primary" class="itemBoxArtist">
+          <!--Inserir imagens-->
+        </ion-item>
+      </ion-col>
+      <ion-col size="6" class="colArtist">
+        <ion-item color="primary" class="itemBoxArtist">
+          <ion-button color="tertiary" class="btnModalArtist">Redes Sociais</ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
 
 <ion-footer>
   <ion-toolbar color="secondary" class="ion-text-center">
     <ion-button color="tertiary" (click)="submitForm()" class="btnArtist">Finalizar</ion-button>
-    <ion-button color="tertiary" Href="artist" class="btnArtist">Cancelar</ion-button>
   </ion-toolbar>
 </ion-footer>

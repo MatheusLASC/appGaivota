@@ -16,7 +16,7 @@
   border-width: medium;
   border-style: solid;
   border-radius: 5px;
-  font-family: 'LulaBorges';
+  font-family: 'JungleLand';
 }
 
 .itemBoxArtist {
@@ -29,4 +29,28 @@
   font-family: 'LulaBorges';
   font-size:large;
   width: 250px;
+}
+
+.selectStateArtist{
+  font-family: 'LulaBorges';
+  background: white;
+  border-color: #011630;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.btnModalArtist
+{
+  font-family: 'LulaBorges';
+  font-size:large;
+  margin-right: 50px;
+  width: 95%;
+}
+
+.colArtist
+{
+  padding: 0px;
 }
