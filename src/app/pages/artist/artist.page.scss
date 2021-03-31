@@ -46,11 +46,22 @@
 {
   font-family: 'LulaBorges';
   font-size:large;
-  margin-right: 50px;
+  margin-top: 15px;
   width: 95%;
+  height: 80%;
+  border-radius: 5px;
 }
 
-.colArtist
-{
-  padding: 0px;
+ion-col {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ion-row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+ion-grid {
+  padding: 0 !important;
+  margin: 0 !important;
 }
