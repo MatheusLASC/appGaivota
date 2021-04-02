@@ -1,0 +1,105 @@
+.titulo{
+  font-family: 'JungleLand';
+  font-size:xx-large;
+}
+
+.btnHQ
+{
+  font-family: 'LulaBorges';
+  font-size:large;
+  width: 250px;
+}
+
+.labelHQ{
+  font-family: 'LulaBorges';
+  font-size:x-large;
+  font-weight:bold;
+  padding-bottom: 15px;
+}
+
+.inputHQ{
+  background: white;
+  border-color: #011630;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 5px;
+  font-family: 'JungleLand';
+}
+
+.itemBoxHQ {
+  --highlight-color-focused: none;
+  --border-style: none;
+}
+
+.selectStateHQ{
+  font-family: 'LulaBorges';
+  background: white;
+  border-color: #011630;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.btnModalHQ
+{
+  font-family: 'LulaBorges';
+  font-size:large;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: auto;
+}
+
+.file {
+  opacity: 0;
+  width: 0.2px;
+  height: 0.2px;
+  position: absolute;
+}
+
+.file-input
+{
+ padding-top: 20px;
+}
+
+.file-input label {
+  display: block;
+  font-family: 'LulaBorges';
+  font-size:large;
+  position: relative;
+  width: 325px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #011630;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto; // para alinhar ao centro
+}
+
+
+ion-grid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ion-row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ion-col {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+ion-item {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+

@@ -1,12 +1,97 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
+    <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>HQ's</ion-title>
+    <ion-title class="titulo">Nova HQ</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="primary">
+  <ion-item color="primary" class="itemBoxHQ">
+    <ion-label position="stacked" class="labelHQ" required>Título</ion-label>
+    <ion-input type="text" class="inputHQ"></ion-input>
+  </ion-item>
 
+  <ion-item color="primary" class="itemBoxHQ">
+    <ion-label position="stacked" class="labelHQ" required>Preview</ion-label>
+    <ion-textarea placeholder="Insira uma breve descriçao sobre a HQ" class="inputHQ"></ion-textarea>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" >
+        <ion-item color="primary" class="itemBoxHQ">
+          <ion-label position="stacked" class="labelHQ" required>Medidas</ion-label>
+          <ion-input type="text" class="inputHQ"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4">
+        <ion-item color="primary" class="itemBoxHQ">
+          <ion-label position="stacked" class="labelHQ" required>Páginas</ion-label>
+          <ion-input type="number" class="inputHQ"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="4" >
+        <ion-item color="primary" class="itemBoxHQ">
+          <ion-label position="stacked" class="labelHQ" required>Valor</ion-label>
+          <ion-input type="number" class="inputHQ"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item color="primary" class="itemBoxHQ">
+    <div class="file-input">
+      <input type="file" id="file" class="file">
+      <label for="file">Capa da HQ</label>
+    </div>
+  </ion-item>
+
+  <ion-item color="primary" class="itemBoxHQ">
+    <ion-label position="stacked" class="labelHQ" required>Gênero</ion-label>
+          <ion-select multiple="true" interface="popover" class="selectStateHQ">
+            <ion-select-option value="Ação/Comics">Ação/Comics</ion-select-option>
+            <ion-select-option value="Biográfico">Biográfico</ion-select-option>
+            <ion-select-option value="Comédia/Tiras">Comédia/Tiras</ion-select-option>
+            <ion-select-option value="Erótico">Erótico</ion-select-option>
+            <ion-select-option value="Fantasia">Fantasia</ion-select-option>
+            <ion-select-option value="Ficção Científica">Ficção Científica</ion-select-option>
+            <ion-select-option value="Histórico/Cultural/Politico">Histórico/Cultural/Politico</ion-select-option>
+            <ion-select-option value="Romance/Drama">Romance/Drama</ion-select-option>
+            <ion-select-option value="Terror/Suspense">Terror/Suspense</ion-select-option>
+
+            <ion-select-option disabled="true" value="Complemento">Complemento</ion-select-option>
+
+            <ion-select-option value="Cartoon">Cartoon</ion-select-option>
+            <ion-select-option value="Mangá">Mangá</ion-select-option>
+            <ion-select-option value="LGBTQIA+">LGBTQIA+</ion-select-option>
+            <ion-select-option value="Jornalismo em Quadrinhos">Jornalismo em Quadrinhos</ion-select-option>
+
+            <ion-select-option disabled="true" value="Faixa Etária">Faixa Etária</ion-select-option>
+
+            <ion-select-option value="Infantil">Infantil</ion-select-option>
+            <ion-select-option value="Infanto Juvenil">Infanto Juvenil</ion-select-option>
+            <ion-select-option value="Adulto +18">Adulto +18</ion-select-option>
+
+            <ion-select-option disabled="true" value="Faixa Etária">Publicação</ion-select-option>
+
+            <ion-select-option value="Independente">Independente</ion-select-option>
+            <ion-select-option value="Editora">Editora</ion-select-option>
+          </ion-select>
+
+  </ion-item>
+  <br>
+  <br>
+  <ion-item color="primary" class="itemBoxHQ">
+
+    <ion-button color="tertiary" class="btnModalHQ">Vincular Artistas</ion-button>
+    <!-- Aqui haverá uma modal para vincular as redes sociais do artista-->
+  </ion-item>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="secondary" class="ion-text-center">
+    <ion-button color="tertiary" (click)="submitForm()" class="btnHQ">Finalizar</ion-button>
+  </ion-toolbar>
+</ion-footer>
