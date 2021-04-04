@@ -1,0 +1,59 @@
+.titulo{
+  font-family: 'JungleLand';
+  font-size:xx-large;
+}
+
+.pesquisa{
+  font-family: 'JungleLand';
+  --border-radius: 5px;
+  box-shadow:#011630
+}
+
+.itemBoxList {
+  --highlight-color-focused: none;
+  --border-style: none;
+  --border-radius: 5px;
+  padding: 3px;
+
+}
+
+.BoxList{
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #011630;
+}
+
+.labelList{
+  font-family: 'JungleLand';
+  font-size:x-large;
+  font-weight:normal;
+}
+
+.nomeHQ{
+  font-family: 'JungleLand';
+  font-size:x-large;
+  font-weight:normal;
+}
+
+.categoriasHQ{
+  font-family: 'JungleLand';
+  font-size:large;
+  font-weight:normal;
+}
+
+
+.avatar{
+  border-style: solid;
+  border-color: #011630;
+}
+
+
+.thumb{
+  border-style:solid;
+  border-color: #011630;
+  border-radius: 5px;
+}
+
+ion-grid {
+  padding: 0 !important;
+}
