@@ -1,0 +1,98 @@
+.titulo{
+  font-family: 'JungleLand';
+  font-size:xx-large;
+}
+
+.close{
+  width: 35px;
+  height: 35px;
+}
+
+.itemBoxSocialMedia {
+  --highlight-color-focused: none;
+  --border-style: none;
+}
+
+.labelSocialMedia{
+  font-family: 'LulaBorges';
+  font-size:35px;
+  font-weight:bold;
+  margin-left: 5px;
+}
+
+.inputSocialMedia{
+  background: white;
+  border-color: #011630;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 5px;
+  font-family: 'JungleLand';
+}
+
+.iconSocialMedia{
+ padding: 5px;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+}
+
+.Facebook{
+  color: #3b5998;
+  background: white;
+}
+
+.Instagram{
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+  radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+  linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  color: white;
+  border-color: #011630;
+}
+
+.Twitter{
+  color: #00acee;
+  background: white;
+}
+
+.Site{
+  color: #011630;
+  background: white;
+}
+
+.Portifolio{
+  color: #053eff;
+  background: white;
+}
+
+.btnSocialMediaModal
+{
+  font-family: 'LulaBorges';
+  font-size:large;
+  width: 250px;
+}
+ion-item {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+ion-icon {
+  margin: 0 !important;
+}
+ion-col {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+ion-row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+ion-grid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
