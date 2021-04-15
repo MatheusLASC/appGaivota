@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { SocialmediaModalPage } from '../socialmedia-modal/socialmedia-modal.page';
+import { SocialmediaModalPage } from './socialmedia-modal/socialmedia-modal.page';
 
 @Component({
   selector: 'app-artist',
@@ -15,6 +15,7 @@ export class ArtistPage implements OnInit {
 
   ngOnInit() {
   }
+
   async openModal() {
     const modal = await this.modalController.create({
       component: SocialmediaModalPage,
