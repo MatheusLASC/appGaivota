@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { VincularartistModalPage } from './vincularartist-modal/vincularartist-modal.page';
 
 @Component({
   selector: 'app-hq',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HqPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public modalController: ModalController
+  ) { }
 
   ngOnInit() {
   }
 
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: VincularartistModalPage,
+    });
+    return await modal.present();
+  }
 }
