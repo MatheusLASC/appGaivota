@@ -8,6 +8,24 @@
   height: 35px;
 }
 
+.pesquisa{
+  font-family: 'JungleLand';
+  --border-radius: 5px;
+  box-shadow:#011630;
+}
+
+.checkboxArtist{
+  --size:25px;
+  --background:#7FAEF5;
+  --border-color:#011630;
+   --border-style: solid;
+   --border-width:3px;
+  --border-radius: 5px;
+  --checkmark-width:5px;
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
 .btnVincularArtistModal
 {
   font-family: 'LulaBorges';
@@ -15,11 +33,40 @@
   width: 250px;
 }
 
-
-ion-item {
-  padding: 0 !important;
-  margin: 0 !important;
+.Lista{
+  background-color: #7FAEF5;
 }
+
+.avatar{
+  border-style:solid;
+  border-color: #011630;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+}
+
+.itemBoxArtist {
+  --highlight-color-focused: none;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #011630;
+  padding: 3px;
+  margin: 5px;
+  background-color: white;
+}
+
+.headerArtistas{
+  font-family: 'LulaBorges';
+  font-size:x-large;
+  font-weight:bold;
+}
+
+.labelList{
+  font-family: 'JungleLand';
+  font-size:x-large;
+  font-weight:normal;
+}
+
 ion-icon {
   margin: 0 !important;
 }
