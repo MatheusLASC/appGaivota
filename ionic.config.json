@@ -1,5 +1,7 @@
 {
   "name": "GaivotaApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
