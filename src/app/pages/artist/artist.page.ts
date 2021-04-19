@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ModalController, Platform, ToastController} from '@ionic/angular';
 import { ArtistService, Artist } from 'src/app/services/artist.service';
 import { SocialmediaModalPage } from './socialmedia-modal/socialmedia-modal.page';
