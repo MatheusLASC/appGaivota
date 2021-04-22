@@ -7,7 +7,7 @@ export interface Artist{
   nameArtist: string;
   CPF: string;
   city: string;
-  state: string; // o que usa pra tipo char?
+  state: string;
   biography: string;
   // Foto e Modal de Redes precisam ser adicionadas
 }

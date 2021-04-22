@@ -9,19 +9,21 @@
 
 <ion-content color="primary">
 
+<form [formGroup]="registrationForm">
+
   <ion-item color="primary" class="itemBoxArtist">
     <ion-label position="stacked" class="labelArtist">Nome Completo</ion-label>
-    <ion-input type="text" class="inputArtist" [(ngModel)]="newArtist.name" ></ion-input>
+    <ion-input class="inputArtist" autocapitalize inputmode="text" formControlName="name" [(ngModel)]="newArtist.name" ></ion-input>
   </ion-item>
 
   <ion-item color="primary" class="itemBoxArtist">
     <ion-label position="stacked" class="labelArtist">Nome Artístico</ion-label>
-    <ion-input type="text" class="inputArtist" [(ngModel)]="newArtist.nameArtist" ></ion-input>
+    <ion-input class="inputArtist" autocapitalize inputmode="text" formControlName="nameArtist" [(ngModel)]="newArtist.nameArtist" ></ion-input>
   </ion-item>
 
   <ion-item color="primary" class="itemBoxArtist">
     <ion-label position="stacked" class="labelArtist">CPF</ion-label>
-    <ion-input type="text" class="inputArtist"  [(ngModel)]="newArtist.CPF" ></ion-input>
+    <ion-input class="inputArtist" autocapitalize inputmode="text" formControlName="CPF" [(ngModel)]="newArtist.CPF" ></ion-input>
   </ion-item>
 
   <ion-grid>
@@ -29,13 +31,13 @@
       <ion-col size="7" >
         <ion-item color="primary" class="itemBoxArtist">
           <ion-label position="stacked" class="labelArtist">Cidade</ion-label>
-          <ion-input type="text" class="inputArtist"  [(ngModel)]="newArtist.city" ></ion-input>
+          <ion-input class="inputArtist" autocapitalize inputmode="text" formControlName="city" [(ngModel)]="newArtist.city" ></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="5" >
         <ion-item color="primary" class="itemBoxArtist">
           <ion-label position="stacked" class="labelArtist">Estado</ion-label>
-          <ion-select interface="popover" class="selectStateArtist" [(ngModel)]="newArtist.state" >
+          <ion-select interface="popover" class="selectStateArtist" formControlName="state" [(ngModel)]="newArtist.state">
             <ion-select-option value="AC">Acre</ion-select-option>
             <ion-select-option value="AL">Alagoas</ion-select-option>
             <ion-select-option value="AP">Amapá</ion-select-option>
@@ -71,7 +73,7 @@
 
   <ion-item color="primary" class="itemBoxArtist">
     <ion-label position="stacked" class="labelArtist">Mini-Biografia</ion-label>
-    <ion-textarea placeholder="Insira a mini-biografia do artista" class="inputArtist"  [(ngModel)]="newArtist.biography"></ion-textarea>
+    <ion-textarea placeholder="Insira a mini-biografia do artista" class="inputArtist" autocapitalize inputmode="text" formControlName="biography" [(ngModel)]="newArtist.biography"></ion-textarea>
   </ion-item>
 
   <ion-grid>
@@ -92,11 +94,12 @@
     </ion-row>
   </ion-grid>
 
+</form>
 </ion-content>
 
 
 <ion-footer>
   <ion-toolbar color="secondary" class="ion-text-center">
-    <ion-button color="tertiary" (click)="addArtist()" class="btnArtist">Finalizar</ion-button>
+    <ion-button color="tertiary" class="btnArtist" (click)="addArtist()" [disabled]="!registrationForm.valid" type="submit" >Finalizar</ion-button>
   </ion-toolbar>
 </ion-footer>
