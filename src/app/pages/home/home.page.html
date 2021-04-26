@@ -26,6 +26,9 @@
       <ion-button color="tertiary" class="btnhome"
       [routerLink]="['/hq']" routerdirection="forward">Cadastrar HQ</ion-button>
   </ion-col>
+  <ion-col>
+    <ion-button (click)="logout()" color="danger" class="btnhome" >Sair</ion-button>
+  </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
