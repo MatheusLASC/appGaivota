@@ -77,16 +77,12 @@
     <ion-row>
       <ion-col size="6" >
         <ion-item color="primary" class="itemBoxArtist">
-          <div class="file-input">
-            <input type="file" id="file" class="file">
-            <label for="file">Foto</label>
-          </div>
+          <ion-label position="stacked" class="labelArtist" required>Foto</ion-label>
+          <ion-input type="text" class="inputArtist"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="6" >
-        <ion-item color="primary" class="itemBoxArtist">
           <ion-button color="tertiary" class="btnModalArtist" (click)="openModal()">Redes Sociais</ion-button>
-        </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
