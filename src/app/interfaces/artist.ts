@@ -3,14 +3,15 @@ export interface Artist {
   name?: string;
   nameartist?: string;
   CPF?: string;
-  cidade?: string;
+  city?: string;
   state?: string;
   biography?: string;
   picture?: string;
-  facebook?: string;
+  /*facebook?: string;
   instagram?: string;
   twitter?: string;
   site?: string;
   portfolio?: string;
+  */
   userid?: string;
 }
