@@ -50,7 +50,8 @@ export class ArtistPage implements OnInit {
     });
   }
 
-  async saveProduct() {
+
+  async saveArtist() {
     await this.presentLoading();
 
     this.artist.userid = (await this.authService.getAuth().currentUser).uid;

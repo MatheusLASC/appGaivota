@@ -9,32 +9,32 @@
 
 <ion-content color="primary">
   <ion-item color="primary" class="itemBoxArtist">
-    <ion-label position="stacked" class="labelArtist" required>Nome Completo</ion-label>
-    <ion-input type="text" class="inputArtist"></ion-input>
+    <ion-label position="stacked" class="labelArtist" >Nome Completo</ion-label>
+    <ion-input type="text" class="inputArtist" [(ngModel)]="artist.name"></ion-input>
   </ion-item>
 
   <ion-item color="primary" class="itemBoxArtist">
-    <ion-label position="stacked" class="labelArtist" required>Nome Artístico</ion-label>
-    <ion-input type="text" class="inputArtist"></ion-input>
+    <ion-label position="stacked" class="labelArtist" >Nome Artístico</ion-label>
+    <ion-input type="text" class="inputArtist" [(ngModel)]="artist.nameartist"></ion-input>
   </ion-item>
 
   <ion-item color="primary" class="itemBoxArtist">
-    <ion-label position="stacked" class="labelArtist" required>CPF</ion-label>
-    <ion-input type="text" class="inputArtist"></ion-input>
+    <ion-label position="stacked" class="labelArtist" >CPF</ion-label>
+    <ion-input type="text" class="inputArtist" [(ngModel)]="artist.CPF"></ion-input>
   </ion-item>
 
   <ion-grid>
     <ion-row>
       <ion-col size="7" >
         <ion-item color="primary" class="itemBoxArtist">
-          <ion-label position="stacked" class="labelArtist" required>Cidade</ion-label>
-          <ion-input type="text" class="inputArtist"></ion-input>
+          <ion-label position="stacked" class="labelArtist">Cidade</ion-label>
+          <ion-input type="text" class="inputArtist"  [(ngModel)]="artist.city" ></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="5" >
         <ion-item color="primary" class="itemBoxArtist">
-          <ion-label position="stacked" class="labelArtist" required>Estado</ion-label>
-          <ion-select interface="popover" class="selectStateArtist">
+          <ion-label position="stacked" class="labelArtist">Estado</ion-label>
+          <ion-select interface="popover" class="selectStateArtist" [(ngModel)]="artist.state">
             <ion-select-option value="AC">Acre</ion-select-option>
             <ion-select-option value="AL">Alagoas</ion-select-option>
             <ion-select-option value="AP">Amapá</ion-select-option>
@@ -69,16 +69,16 @@
   </ion-grid>
 
   <ion-item color="primary" class="itemBoxArtist">
-    <ion-label position="stacked" class="labelArtist" required>Mini-Biografia</ion-label>
-    <ion-textarea placeholder="Insira a mini-biografia do artista" class="inputArtist"></ion-textarea>
+    <ion-label position="stacked" class="labelArtist">Mini-Biografia</ion-label>
+    <ion-textarea placeholder="Insira a mini-biografia do artista" class="inputArtist" [(ngModel)]="artist.biography"></ion-textarea>
   </ion-item>
 
   <ion-grid>
     <ion-row>
       <ion-col size="6" >
         <ion-item color="primary" class="itemBoxArtist">
-          <ion-label position="stacked" class="labelArtist" required>Foto</ion-label>
-          <ion-input type="text" class="inputArtist"></ion-input>
+          <ion-label position="stacked" class="labelArtist">Foto</ion-label>
+          <ion-input type="text" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.picture"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="6" >
@@ -91,6 +91,6 @@
 
 <ion-footer>
   <ion-toolbar color="secondary" class="ion-text-center">
-    <ion-button color="tertiary" (click)="submitForm()" class="btnArtist">Finalizar</ion-button>
+    <ion-button color="tertiary" (click)="saveArtist()" class="btnArtist">Finalizar</ion-button>
   </ion-toolbar>
 </ion-footer>
