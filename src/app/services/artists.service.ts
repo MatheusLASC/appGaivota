@@ -26,12 +26,16 @@ export class ArtistsService {
     );
   }
 
-  addProduct(artist: Artist) {
+  addArtist(artist: Artist) {
     return this.artistsCollection.add(artist);
   }
 
-  getProduct(id: string) {
+  getArtist(id: string) {
     return this.artistsCollection.doc<Artist>(id).valueChanges();
+  }
+
+  updateArtist(id: string, artist: Artist) {
+    return this.artistsCollection.doc<Artist>(id).update(artist);
   }
 
    }
