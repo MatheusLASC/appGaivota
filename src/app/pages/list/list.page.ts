@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Artist } from 'src/app/interfaces/artist';
+import { ArtistsService } from 'src/app/services/artists.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPage implements OnInit {
 
-  constructor() { }
+  public artists = new Array<Artist>();
+  private artistsSubscription: Subscription;
+
+  constructor(private artistService: ArtistsService) {
+    this.artistsSubscription = this.artistService.getArtists().subscribe(data => {
+      this.artists = data;
+    });
+  }
 
   ngOnInit() {
   }
 
+  OnDestroy() {
+    this.artistsSubscription.unsubscribe();
+  }
 }
