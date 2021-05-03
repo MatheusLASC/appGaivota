@@ -9,19 +9,36 @@
 
 
 <ion-content color="primary">
-
   <ion-toolbar color="primary">
     <ion-searchbar animated placeholder="Artista, HQ ou Categoria" color="light" class="pesquisa"></ion-searchbar>
   </ion-toolbar>
+    <ion-list *ngIf="!artists.length">
+      <ion-item color="primary" *ngFor="let item of [0, 1, 2, 3, 4,5, 6]">
+        <ion-avatar color="tertiary" slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label olor="primary">
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
 
   <!-- Essa parte é um exemplo de como vai funcionar a lógica de exibição dos artistas-->
   <!-- Cada grid representa um artista, e cada item de HQs mostram as obras vinculadas aos artistas -->
-  <ion-grid color="light" class="BoxList">
+  <ion-grid color="light" class="BoxList" *ngFor="let artist of artists">
     <ion-item class="itemBoxList">
       <ion-avatar slot="start" class="avatar">
-        <img src="./assets/icons/ExemploQuadrinista.png">
+        <img [src]="artist.picture">
       </ion-avatar>
-      <ion-label class="labelList">Nome Artístico 1</ion-label>
+      <ion-label class="labelList">{{ artist.nameartist }}</ion-label>
     </ion-item>
     <ion-item class="itemBoxList">
       <ion-thumbnail slot="end" class="thumb">
@@ -32,36 +49,6 @@
         <p class="categoriasHQ">Categorias: Categoria 1, Categoria 2</p>
       </ion-label>
     </ion-item>
-  </ion-grid>
-
-  <ion-grid color="light" class="BoxList">
-    <ion-item class="itemBoxList">
-      <ion-avatar slot="start" class="avatar">
-        <img src="./assets/icons/ExemploQuadrinista2.png">
-      </ion-avatar>
-      <ion-label class="labelList">Nome Artístico 2</ion-label>
-    </ion-item>
-    <ion-item class="itemBoxList">
-      <ion-thumbnail slot="end" class="thumb">
-        <img src="./assets/icons/Quadrinhos2.png">
-      </ion-thumbnail>
-      <ion-label>
-        <h2 class="ion-text-center nomeHQ">Título da HQ 2</h2>
-        <p class="categoriasHQ">Categorias: Categoria 2, Categoria 3</p>
-      </ion-label>
-
-    </ion-item>
-    <ion-item class="itemBoxList">
-      <ion-thumbnail slot="end" class="thumb">
-        <img src="./assets/icons/Quadrinhos.png">
-      </ion-thumbnail>
-      <ion-label>
-        <h2 class="ion-text-center nomeHQ">Título da HQ 1</h2>
-        <p class="categoriasHQ">Categorias: Categoria 1, Categoria 2</p>
-      </ion-label>
-    </ion-item>
-
-
   </ion-grid>
 </ion-content>
 

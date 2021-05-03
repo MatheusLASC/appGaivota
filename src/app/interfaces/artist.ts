@@ -7,11 +7,5 @@ export interface Artist {
   state?: string;
   biography?: string;
   picture?: string;
-  /*facebook?: string;
-  instagram?: string;
-  twitter?: string;
-  site?: string;
-  portfolio?: string;
-  */
   userid?: string;
 }
