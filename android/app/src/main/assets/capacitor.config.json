@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.gaivotaapp",
+  "appId": "io.ionic.starter",
   "appName": "GaivotaApp",
   "bundledWebRuntime": false,
   "npmClient": "npm",
