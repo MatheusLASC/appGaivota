@@ -1,0 +1,62 @@
+<ion-content class="swiper-no-swiping ion-text-center" color="primary">
+  <ion-grid>
+    <ion-row>
+    <ion-col size="12">
+        <img class="imagem" src="/assets/icons/logo.png">
+    </ion-col>
+    <ion-col size="12">
+        <span class="mensagem">O aplicativo de Onboarding dos Artistas Parceiros</span>
+    </ion-col>
+  </ion-row>
+  </ion-grid>
+  <div class="container top">
+    <ion-segment (ionChange)="segmentChanged($event)" mode="ios" value="login">
+      <ion-segment-button mode="ios" value="login">
+        <ion-label class="labelLogin">Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button mode="ios" value="register">
+        <ion-label class="labelLogin">Cadastro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <ion-slides class="slides">
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <ion-label class="labelLogin">Login</ion-label>
+        <ion-item class="ion-margin-top itemLogin" lines="none">
+          <ion-input type="email" placeholder="E-mail" class="inputLogin" [(ngModel)]="userLogin.email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top itemLogin" lines="none">
+          <ion-input type="password" placeholder="Senha" class="inputLogin" [(ngModel)]="userLogin.password"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top btnhome" (click)="login()" color="tertiary" expand="block">
+          Entrar
+        </ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide-inner ion-padding">
+        <ion-label class="labelLogin">Cadastro</ion-label>
+        <ion-item class="ion-margin-top itemLogin" lines="none">
+          <ion-input type="text" placeholder="Nome" class="inputLogin"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top itemLogin" lines="none">
+          <ion-input type="email" placeholder="E-mail" class="inputLogin" [(ngModel)]="userRegister.email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top itemLogin" lines="none">
+          <ion-input type="password" placeholder="Senha" class="inputLogin" [(ngModel)]="userRegister.password"></ion-input>
+        </ion-item>
+
+        <ion-button class="ion-margin-top btnhome" (click)="register()" color="tertiary" expand="block">
+          Cadastrar
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

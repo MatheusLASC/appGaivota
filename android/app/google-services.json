@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "696954399044",
+    "firebase_url": "https://app-gaivota-default-rtdb.firebaseio.com",
+    "project_id": "app-gaivota",
+    "storage_bucket": "app-gaivota.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696954399044:android:5655c89ca4f06586eb0f11",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696954399044-kot58jj00495s5hg3vdkijvtbvt154s3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA77WkGS_pLdzm92H7JLnKR_OqO8-DewDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696954399044-kot58jj00495s5hg3vdkijvtbvt154s3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

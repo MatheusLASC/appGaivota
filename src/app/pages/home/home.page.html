@@ -7,7 +7,7 @@
         </div>
       </ion-col>
       <ion-col size="12">
-        <span class="mensagem">O aplicativo de Onboarding dos Artistas Parceiros</span>
+        <span class="mensagem">Seja Bem-Vindo ao nosso Onboarding de Artistas</span>
         <br><br>
       </ion-col>
     </ion-row>
@@ -25,6 +25,9 @@
     <ion-col>
       <ion-button color="tertiary" class="btnhome"
       [routerLink]="['/hq']" routerdirection="forward">Cadastrar HQ</ion-button>
+  </ion-col>
+  <ion-col>
+    <ion-button (click)="logout()" color="danger" class="btnhome" >Sair</ion-button>
   </ion-col>
     </ion-row>
   </ion-grid>
