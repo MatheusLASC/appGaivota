@@ -18,11 +18,6 @@
     <ion-input type="text" class="inputArtist" [(ngModel)]="artist.nameartist"></ion-input>
   </ion-item>
 
-  <ion-item color="primary" class="itemBoxArtist">
-    <ion-label position="stacked" class="labelArtist" >CPF</ion-label>
-    <ion-input type="text" class="inputArtist" [(ngModel)]="artist.CPF"></ion-input>
-  </ion-item>
-
   <ion-grid>
     <ion-row>
       <ion-col size="7" >
@@ -73,21 +68,52 @@
     <ion-textarea placeholder="Insira a mini-biografia do artista" class="inputArtist" [(ngModel)]="artist.biography"></ion-textarea>
   </ion-item>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6" >
-        <ion-item color="primary" class="itemBoxArtist">
-          <ion-label position="stacked" class="labelArtist">Foto</ion-label>
-          <ion-input type="text" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.picture"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="6" >
-          <ion-button color="tertiary" class="btnModalArtist" (click)="openModal()">Redes Sociais</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-label position="stacked" class="labelArtist">Foto</ion-label>
+    <ion-input type="url" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.picture"></ion-input>
+  </ion-item>
 
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-icon slot="start" class=" ion-align-self-center iconSocialMedia Instagram" name="logo-instagram"></ion-icon>
+    <ion-label position="stacked" class="labelSocialMedia">Instagram</ion-label>
+  </ion-item>
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-input type="url" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.instagram"></ion-input>
+  </ion-item>
+
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-icon slot="start" class=" ion-align-self-center iconSocialMedia Portifolio" name="logo-behance"></ion-icon>
+    <ion-label position="stacked" class="labelSocialMedia">Portifólio</ion-label>
+  </ion-item>
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-input type="url" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.portifolio"></ion-input>
+  </ion-item>
+
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-icon slot="start" class=" ion-align-self-center iconSocialMedia Site" name="logo-google"></ion-icon>
+    <ion-label position="stacked" class="labelSocialMedia">Site</ion-label>
+  </ion-item>
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-input type="url" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.site"></ion-input>
+  </ion-item>
+
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-icon slot="start" class=" ion-align-self-center iconSocialMedia Facebook" name="logo-facebook"></ion-icon>
+    <ion-label position="stacked" class="labelSocialMedia">Facebook</ion-label>
+  </ion-item>
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-input type="url" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.facebook"></ion-input>
+  </ion-item>
+
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-icon slot="start" class=" ion-align-self-center iconSocialMedia Twitter" name="logo-twitter"></ion-icon>
+    <ion-label position="stacked" class="labelSocialMedia">Twitter</ion-label>
+  </ion-item>
+  <ion-item color="primary" class="itemBoxArtist">
+    <ion-input type="url" class="inputArtist" placeholder="Insira a Url" [(ngModel)]="artist.twitter"></ion-input>
+  </ion-item>
+
+</ion-content>
 
 <ion-footer>
   <ion-toolbar color="secondary" class="ion-text-center">
