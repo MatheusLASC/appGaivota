@@ -10,12 +10,12 @@
 <ion-content color="primary">
   <ion-item color="primary" class="itemBoxHQ">
     <ion-label position="stacked" class="labelHQ" required>Título</ion-label>
-    <ion-input type="text" class="inputHQ"></ion-input>
+    <ion-input type="text" class="inputHQ" [(ngModel)]="hq.titulo"></ion-input>
   </ion-item>
 
   <ion-item color="primary" class="itemBoxHQ">
     <ion-label position="stacked" class="labelHQ" required>Preview</ion-label>
-    <ion-textarea placeholder="Insira uma breve descriçao sobre a HQ" class="inputHQ"></ion-textarea>
+    <ion-textarea placeholder="Insira uma breve descriçao sobre a HQ" class="inputHQ" [(ngModel)]="hq.preview"></ion-textarea>
   </ion-item>
 
   <ion-grid>
@@ -23,34 +23,32 @@
       <ion-col size="4" >
         <ion-item color="primary" class="itemBoxHQ">
           <ion-label position="stacked" class="labelHQ" required>Medidas</ion-label>
-          <ion-input type="text" class="inputHQ"></ion-input>
+          <ion-input type="text" class="inputHQ" [(ngModel)]="hq.medidas"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="4">
         <ion-item color="primary" class="itemBoxHQ">
           <ion-label position="stacked" class="labelHQ" required>Páginas</ion-label>
-          <ion-input type="number" class="inputHQ"></ion-input>
+          <ion-input type="number" class="inputHQ" [(ngModel)]="hq.paginas"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="4" >
         <ion-item color="primary" class="itemBoxHQ">
           <ion-label position="stacked" class="labelHQ" required>Valor</ion-label>
-          <ion-input type="number" class="inputHQ"></ion-input>
+          <ion-input type="number" class="inputHQ" [(ngModel)]="hq.valor"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-item color="primary" class="itemBoxHQ">
-    <div class="file-input">
-      <input type="file" id="file" class="file">
-      <label for="file">Capa da HQ</label>
-    </div>
+    <ion-label position="stacked" class="labelHQ">Capa da HQ</ion-label>
+    <ion-input type="url" class="inputHQ" placeholder="Insira a Url" [(ngModel)]="hq.capa"></ion-input>
   </ion-item>
 
   <ion-item color="primary" class="itemBoxHQ">
     <ion-label position="stacked" class="labelHQ" required>Gênero</ion-label>
-          <ion-select multiple="true" interface="popover" class="selectStateHQ">
+          <ion-select multiple="true" interface="popover" class="selectStateHQ" [(ngModel)]="hq.genero">
             <ion-select-option value="Ação/Comics">Ação/Comics</ion-select-option>
             <ion-select-option value="Biográfico">Biográfico</ion-select-option>
             <ion-select-option value="Comédia/Tiras">Comédia/Tiras</ion-select-option>
@@ -92,6 +90,6 @@
 
 <ion-footer>
   <ion-toolbar color="secondary" class="ion-text-center">
-    <ion-button color="tertiary" (click)="submitForm()" class="btnHQ">Finalizar</ion-button>
+    <ion-button color="tertiary" (click)="saveHq()" class="btnHQ">Finalizar</ion-button>
   </ion-toolbar>
 </ion-footer>

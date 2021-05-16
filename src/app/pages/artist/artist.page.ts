@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 import { Artist } from 'src/app/interfaces/artist';
 import { ArtistsService } from 'src/app/services/artists.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { SocialmediaModalPage } from './socialmedia-modal/socialmedia-modal.page';
 
 @Component({
   selector: 'app-artist',
@@ -20,7 +19,6 @@ export class ArtistPage implements OnInit {
 
 
   constructor(
-    public modalController: ModalController,
     private artistService: ArtistsService,
     private activatedRoute: ActivatedRoute,
     private navCtrl: NavController,
@@ -87,13 +85,6 @@ export class ArtistPage implements OnInit {
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({ message, duration: 2000 });
     toast.present();
-  }
-
-  async openModal() {
-    const modal = await this.modalController.create({
-      component: SocialmediaModalPage,
-    });
-    return await modal.present();
   }
 
 }
