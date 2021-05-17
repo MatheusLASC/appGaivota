@@ -79,13 +79,19 @@
           </ion-select>
 
   </ion-item>
-  <br>
-  <br>
-  <ion-item color="primary" class="itemBoxHQ">
 
-    <ion-button color="tertiary" class="btnModalHQ" (click)="openModal()" >Vincular Artistas</ion-button>
-    <!-- Aqui haverá uma modal para vincular as redes sociais do artista-->
-  </ion-item>
+  <ion-list class="Lista">
+    <ion-list-header color="primary" class="headerArtistas">Artistas</ion-list-header>
+      <!-- <ion-searchbar animated placeholder="Nome do Artista" color="light" class="pesquisa"></ion-searchbar> -->
+      <ion-item color="light" class="itemBoxArtist" *ngFor="let artist of artists">
+      <ion-label class="labelList">{{artist.nameartist}}</ion-label>
+      <ion-checkbox [(ngModel)]="artist.check" color="tertiary" slot="start" class="checkboxArtist"></ion-checkbox>
+      <ion-thumbnail slot="start" class="avatar">
+        <img [src]="artist.picture">
+      </ion-thumbnail>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
 
 <ion-footer>

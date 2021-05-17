@@ -1,3 +1,5 @@
+import { Artist } from './artist';
+
 export interface Hq {
   id?: string;
   titulo?: string;
@@ -7,6 +9,8 @@ export interface Hq {
   valor?: number;
   capa?: string;
   genero?: string;
+  artists?: Artist[];
+  idartists?: string[];
   userid?: string;
 }
 
