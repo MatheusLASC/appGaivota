@@ -27,6 +27,45 @@
   font-weight: bold;
 }
 
+.Lista{
+  background-color: #7FAEF5;
+}
+
+.headerArtistas{
+  font-family: 'LulaBorges';
+  font-size:x-large;
+  font-weight:bold;
+}
+
+.pesquisa{
+  font-family: 'JungleLand';
+  --border-radius: 5px;
+  box-shadow:#011630;
+}
+
+.itemBoxArtist {
+  --highlight-color-focused: none;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #011630;
+  padding: 3px;
+  margin: 5px;
+  background-color: white;
+}
+
+.headerArtistas{
+  font-family: 'LulaBorges';
+  font-size:x-large;
+  font-weight:bold;
+}
+
+.labelList{
+  font-family: 'JungleLand';
+  font-size:x-large;
+  font-weight:normal;
+}
+
+
 .itemBoxHQ {
   --highlight-color-focused: none;
   --border-style: none;
