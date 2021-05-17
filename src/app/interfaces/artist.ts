@@ -1,3 +1,4 @@
+
 export interface Artist {
   id?: string;
   name?: string;
@@ -12,4 +13,8 @@ export interface Artist {
   site?: string;
   portfolio?: string;
   userid?: string;
+}
+
+export interface Artistcheck extends Artist{
+  check?: boolean;
 }

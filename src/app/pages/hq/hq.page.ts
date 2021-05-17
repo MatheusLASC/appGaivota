@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LoadingController, ModalController, NavController, ToastController } from '@ionic/angular';
+import { LoadingController, NavController, ToastController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
+import { Artistcheck } from 'src/app/interfaces/artist';
 import { Hq } from 'src/app/interfaces/hq';
+import { ArtistsService } from 'src/app/services/artists.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { HqsService } from 'src/app/services/hqs.service';
-import { VincularartistModalPage } from './vincularartist-modal/vincularartist-modal.page';
 
 @Component({
   selector: 'app-hq',
@@ -15,12 +16,14 @@ import { VincularartistModalPage } from './vincularartist-modal/vincularartist-m
 export class HqPage implements OnInit {
   private hqId: string = null;
   public hq: Hq = {};
+  public artists = new Array<Artistcheck>();
   private loading: any;
   private hqSubscription: Subscription;
+  private artistsSubscription: Subscription;
 
   constructor(
-    public modalController: ModalController,
     private hqService: HqsService,
+    private artistService: ArtistsService,
     private activatedRoute: ActivatedRoute,
     private navCtrl: NavController,
     private loadingCtrl: LoadingController,
@@ -35,6 +38,12 @@ export class HqPage implements OnInit {
    }
 
   ngOnInit() {
+    this.loadArtists();
+  }
+
+  OnDestroy() {
+    this.artistsSubscription.unsubscribe();
+    this.hqSubscription.unsubscribe();
   }
 
   loadHq() {
@@ -42,6 +51,14 @@ export class HqPage implements OnInit {
       this.hq = data;
     });
   }
+
+  loadArtists()
+  {
+    this.artistsSubscription = this.artistService.getArtists().subscribe(data => {
+      this.artists = data;
+    });
+  }
+
 
 
   async saveHq() {
@@ -61,11 +78,19 @@ export class HqPage implements OnInit {
       }
     } else {
       try {
+        this.hq.idartists = [];
+        this.artists.forEach(artist => {
+          if (artist.check)
+          {
+              this.hq.idartists.push(artist.id);
+          }
+        });
         await this.hqService.addHq(this.hq);
         await this.loading.dismiss();
 
         this.navCtrl.navigateBack('/list');
       } catch (error) {
+        console.log(error);
         this.presentToast('Erro ao tentar salvar');
         this.loading.dismiss();
       }
@@ -83,10 +108,4 @@ export class HqPage implements OnInit {
   }
 
 
-  async openModal() {
-    const modal = await this.modalController.create({
-      component: VincularartistModalPage,
-    });
-    return await modal.present();
-  }
 }
